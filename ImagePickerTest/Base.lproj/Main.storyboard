@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagePickerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z61-xU-Z2P">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-nZ-X9B"/>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-Lt-emX"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNU-wl-9Id">
+                                <items>
+                                    <barButtonItem title="Pick From Album" id="Ilg-CG-zvC">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="BYZ-38-t0r" id="wkd-jQ-Fq5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pick From Camera" id="Lsh-ff-HFc">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera2:" destination="BYZ-38-t0r" id="QXJ-9M-LGy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jra-QY-XvG">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-yJ-guT">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z61-xU-Z2P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4iC-wq-dLa"/>
+                            <constraint firstItem="Jra-QY-XvG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DtW-mm-EeN"/>
+                            <constraint firstItem="FKy-Lt-emX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FKW-BP-RRq"/>
+                            <constraint firstItem="FKy-Lt-emX" firstAttribute="centerX" secondItem="Z61-xU-Z2P" secondAttribute="centerX" id="HnL-wg-76I"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Z61-xU-Z2P" secondAttribute="bottom" constant="-6" id="ROI-RR-eGc"/>
+                            <constraint firstItem="UNU-wl-9Id" firstAttribute="top" secondItem="KLF-yJ-guT" secondAttribute="bottom" constant="10" id="RQ3-Zo-rs5"/>
+                            <constraint firstItem="UNU-wl-9Id" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z6J-LC-Rbo"/>
+                            <constraint firstItem="Jra-QY-XvG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="av1-ts-wBp"/>
+                            <constraint firstItem="UNU-wl-9Id" firstAttribute="top" secondItem="FKy-Lt-emX" secondAttribute="bottom" constant="170" id="cmU-Ac-ZNt"/>
+                            <constraint firstItem="FKy-Lt-emX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="dNE-sg-fK0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UNU-wl-9Id" secondAttribute="bottom" id="gG4-np-Ha9"/>
+                            <constraint firstItem="FKy-Lt-emX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gPb-0p-SzU"/>
+                            <constraint firstAttribute="trailing" secondItem="UNU-wl-9Id" secondAttribute="trailing" id="lEV-F7-cMi"/>
+                            <constraint firstItem="KLF-yJ-guT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lLf-NJ-iJx"/>
+                            <constraint firstItem="KLF-yJ-guT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="maw-dF-XCC"/>
+                            <constraint firstItem="Z61-xU-Z2P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="629" id="pOw-gn-Snq"/>
+                            <constraint firstItem="FKy-Lt-emX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="193" id="sXT-n9-6Rx"/>
+                            <constraint firstItem="Jra-QY-XvG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="snD-VF-wVR"/>
+                            <constraint firstItem="FKy-Lt-emX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yDP-qS-p5l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="Lsh-ff-HFc" id="Wjf-GN-4F4"/>
+                        <outlet property="imagePickerView" destination="FKy-Lt-emX" id="vXO-uz-e3l"/>
+                        <outlet property="textBoxBottom" destination="KLF-yJ-guT" id="stg-pT-uqy"/>
+                        <outlet property="textBoxTop" destination="Jra-QY-XvG" id="YSO-bq-2AZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.5" y="37.5"/>
+        </scene>
+    </scenes>
+</document>
